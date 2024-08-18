@@ -52,17 +52,17 @@
                                             </tr>
                                         </thead>
                                         <tbody>
-                                            @foreach ($kendaraans as $kendaraan)
                                             <tr>
-                                                <td>{{ $kendaraan->id }}</td>
-                                                <td>{{ $kendaraan->nama_kendaraan }}</td>
-                                                <td>{{ $kendaraan->plat_kendaraan }}</td>
+                                                <td>{{ $kendaraan['nama'] }}</td>
+                                                <td>{{ $kendaraan['plat'] }}</td>
+                                                <td>{{ $kendaraan['latitude'] }}</td>
+                                                <td>{{ $kendaraan['longitude'] }}</td>
                                                 <td>
-                                                    <a href="https://www.google.com/maps/?q={{ $kendaraan->koordinat_lokasi_terkini }}" target="_blank" class="btn btn-info btn-sm">Cek</a>
+                                                    <a href="https://www.google.com/maps/?q={{ $kendaraan['latitude'] }},{{ $kendaraan['longitude'] }}" target="_blank" class="btn btn-info btn-sm">Cek</a>
                                                 </td>
                                             </tr>
-                                            @endforeach
                                         </tbody>
+                                        
                                     </table>
                                 </div>
                                 <!-- /.card-body -->
