@@ -48,11 +48,14 @@
                                                 <th>ID</th>
                                                 <th>Nama Kendaraan</th>
                                                 <th>Plat</th>
+                                                <th>Latitude</th>
+                                                <th>Longitude</th>
                                                 <th>Lokasi Terkini</th>
                                             </tr>
                                         </thead>
                                         <tbody>
                                             <tr>
+                                                <td>1</td>
                                                 <td>{{ $kendaraan['nama'] }}</td>
                                                 <td>{{ $kendaraan['plat'] }}</td>
                                                 <td>{{ $kendaraan['latitude'] }}</td>

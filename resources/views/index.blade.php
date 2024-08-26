@@ -37,7 +37,7 @@
                     <div class="row">
                         <div class="col-12 col-sm-6 col-md-3">
                             <div class="info-box">
-                                <span class="info-box-icon bg-info elevation-1"><i class="fas fa-cog"></i></span>
+                                <span class="info-box-icon bg-info elevation-1"><i class="fas fa-car"></i></span>
 
                                 <div class="info-box-content">
                                     <span class="info-box-text">Total Kendaraan</span>
@@ -70,7 +70,7 @@
                         <div class="col-12 col-sm-6 col-md-3">
                             <div class="info-box mb-3">
                                 <span class="info-box-icon bg-success elevation-1"><i
-                                        class="fas fa-shopping-cart"></i></span>
+                                        class="fas fa-oil-can"></i></span>
 
                                 <div class="info-box-content">
                                     <span class="info-box-text">Bahan Bakar</span>
@@ -83,7 +83,7 @@
                         <!-- /.col -->
                         <div class="col-12 col-sm-6 col-md-3">
                             <div class="info-box mb-3">
-                                <span class="info-box-icon bg-warning elevation-1"><i class="fas fa-users"></i></span>
+                                <span class="info-box-icon bg-warning elevation-1"><i class="fas fa-tachometer-alt"></i></span>
 
                                 <div class="info-box-content">
                                     <span class="info-box-text">Total Kilometer</span>
@@ -112,7 +112,7 @@
                                     <div class="row">
                                         <div class="col-md-8">
                                             <p class="text-center">
-                                                <strong>Sales: 1 Jan, 2014 - 30 Jul, 2014</strong>
+                                                <strong>Pemakaian Bahan Bakar: 1 Jan, 2024 - 31 Des, 2024</strong>
                                             </p>
 
                                             <div class="chart">
@@ -129,20 +129,20 @@
 
                                             <div class="progress-group">
                                                 Kendaraan 1
-                                                <span class="float-right"><b>160</b>/200</span>
+                                                <span class="float-right"><b>80</b>/100</span>
                                                 <div class="progress progress-sm">
                                                     <div class="progress-bar bg-primary" style="width: 80%"></div>
                                                 </div>
                                             </div>
                                             <!-- /.progress-group -->
 
-                                            <div class="progress-group">
+                                            {{-- <div class="progress-group">
                                                 Kendaraan 2
                                                 <span class="float-right"><b>310</b>/400</span>
                                                 <div class="progress progress-sm">
                                                     <div class="progress-bar bg-danger" style="width: 75%"></div>
                                                 </div>
-                                            </div>
+                                            </div> --}}
                                         </div>
                                         <!-- /.col -->
                                     </div>
@@ -192,7 +192,7 @@
                                                 </tr>
                                                 <tr>
                                                     <td><a href="pages/examples/invoice.html">2</a></td>
-                                                    <td>Kendaraan 2</td>
+                                                    <td>Kendaraan 1</td>
                                                     <td><span class="badge badge-warning">Pending</span></td>
                                                     <td>
                                                         <div class="sparkbar" data-color="#f39c12" data-height="20">
