@@ -2,30 +2,28 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\KendaraanController;
-
-/*
-|--------------------------------------------------------------------------
-| Web Routes
-|--------------------------------------------------------------------------
-|
-| Here is where you can register web routes for your application. These
-| routes are loaded by the RouteServiceProvider and all of them will
-| be assigned to the "web" middleware group. Make something great!
-|
-*/
+use App\Http\Controllers\AuthController;
 
 Route::get('/', function () {
     return view('index');
-});
+})->middleware('checklogin');
 
-// Route untuk menampilkan data kendaraan
-Route::get('/data-kendaraan', [KendaraanController::class, 'index']);
+Route::get('/login', function () {
+    return view('auth.login');
+})->name('login');
 
+Route::post('/login', [AuthController::class, 'login']);
 
-Route::get('/laporan-pemeliharaan', function () {
-    return view('laporanpemeliharaan');
-});
+// Route untuk logout
+Route::post('/logout', [AuthController::class, 'logout'])->name('logout');
 
-Route::get('/show-info', function () {
-    return view('showinfo');
+// Proteksi route lainnya dengan middleware 'checklogin'
+Route::middleware(['checklogin'])->group(function () {
+    Route::get('/data-kendaraan', [KendaraanController::class, 'index']);
+    Route::get('/laporan-pemeliharaan', function () {
+        return view('laporanpemeliharaan');
+    });
+    Route::get('/show-info', function () {
+        return view('showinfo');
+    });
 });
